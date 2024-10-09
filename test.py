@@ -28,18 +28,17 @@ def main():
     device = connect_device()
     if not device:
         return
-    imageCounter = 0
+    imageCounter = 84
     while True:
-        imageName = f"screenshot_{imageCounter}.png"
+        imageName = f"lcaImages/img{imageCounter}.png"
         imageCounter += 1
         take_screenshot(device, imageName)
         device.shell("input swipe 620 200 100 200 500")
-        data = pytesseract.image_to_string(imageName)
-        print(data.split("\n"))
+        # data = pytesseract.image_to_string(imageName)
+        # print(data.split("\n"))
         sleep(0.4)
+        if imageCounter == 28*3: exit()
 
-        if imageCounter == 4: exit()
-        
     
 
 if __name__ == "__main__":
