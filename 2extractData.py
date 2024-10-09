@@ -28,7 +28,7 @@ def main():
     device = connect_device()
     if not device:
         return
-    imageCounter = 84
+    imageCounter = 0
     while True:
         imageName = f"lcaImages/img{imageCounter}.png"
         imageCounter += 1
@@ -37,7 +37,7 @@ def main():
         # data = pytesseract.image_to_string(imageName)
         # print(data.split("\n"))
         sleep(0.4)
-        if imageCounter == 28*3: exit()
+        if imageCounter == 28*1: exit()
 
     
 
