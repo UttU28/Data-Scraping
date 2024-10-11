@@ -42,3 +42,4 @@ while True:
     counter += 1
     sleep(0.4)
     device.shell("input swipe 500 940 500 100 1000")
+    break

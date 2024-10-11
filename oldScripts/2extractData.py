@@ -21,7 +21,7 @@ def take_screenshot(device, imageName):
     screenshot = device.screencap()
     with open(imageName, "wb") as f:
         f.write(screenshot)
-    cropTheImage(imageName)
+    # cropTheImage(imageName)
 
 
 def main():
@@ -29,15 +29,15 @@ def main():
     if not device:
         return
     imageCounter = 0
-    while True:
-        imageName = f"lcaImages/img{imageCounter}.png"
-        imageCounter += 1
-        take_screenshot(device, imageName)
-        device.shell("input swipe 620 200 100 200 500")
+    # while True:
+        # imageName = f"screenShots/img{imageCounter}.png"
+        # imageCounter += 1
+        # take_screenshot(device, imageName)
+    device.shell("input swipe 500 900 500 100 500")
         # data = pytesseract.image_to_string(imageName)
         # print(data.split("\n"))
-        sleep(0.4)
-        if imageCounter == 28*1: exit()
+        # sleep(0.4)
+        # if imageCounter == 28*1: exit()
 
     
 
