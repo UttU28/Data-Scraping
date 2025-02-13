@@ -89,7 +89,7 @@ def getNews():
                 
                 newsId = hashlib.md5(link.encode()).hexdigest()
                 if newsId in existingNewsIds:
-                    print(f"Skipping existing news: {title}")
+                    # print(f"Skipping existing news: {title}")
                     continue
                 
                 articleText = getArticleText(link, source["articleTextSelector"])
